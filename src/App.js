@@ -3,21 +3,23 @@ import AddUser from "./components/AddUser/AddUser";
 import UsersList from "./components/UsersList/UsersList";
 import ErrorModal from "./components/ErrorModal/ErrorModal";
 
+let id = 0;
+
 const INITIAL_DATA = [
   {
-    id: 0,
+    key: id,
     name: "Jan",
     age: 91,
   },
 
   {
-    id: 1,
+    key: ++id,
     name: "Zbigniew",
     age: 33,
   },
 
   {
-    id: 2,
+    key: ++id,
     name: "Joanna",
     age: 44,
   },
@@ -25,14 +27,16 @@ const INITIAL_DATA = [
 
 function App() {
   const [users, setUsers] = useState(INITIAL_DATA);
-  
-
+  const addUserHandler = (user) => {
+    setUsers((previousUsers) => {
+      return [user, ...previousUsers];
+    });
+  };
 
   return (
     <div className="wrapper">
-      <AddUser />
+      <AddUser onAddUser={addUserHandler} userId={id} />
       <UsersList users={users} />
-
       {/* <ErrorModal /> */}
     </div>
   );
