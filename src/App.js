@@ -27,6 +27,7 @@ const INITIAL_DATA = [
 
 function App() {
   const [users, setUsers] = useState(INITIAL_DATA);
+
   const addUserHandler = (user) => {
     setUsers((previousUsers) => {
       return [user, ...previousUsers];
@@ -37,7 +38,6 @@ function App() {
     <div className="wrapper">
       <AddUser onAddUser={addUserHandler} userId={id} />
       <UsersList users={users} />
-      {/* <ErrorModal /> */}
     </div>
   );
 }
