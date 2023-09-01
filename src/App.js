@@ -1,8 +1,15 @@
-function App() {
+import AddUser from "./components/AddUser/AddUser";
+import UsersList from "./components/UsersList/UsersList";
+import ErrorModal from "./components/ErrorModal/ErrorModal";
 
-    return (
-        <p>Test</p>
-    );
+
+function App() {
+  return (
+    <div className="wrapper">
+      <AddUser />
+      <UsersList />
+    </div>
+  );
 }
 
 export default App;

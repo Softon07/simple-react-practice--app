@@ -1,0 +1,29 @@
+.form {
+    margin: 0 50px;
+    margin-top: 25px;
+    padding: 0 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.form-item {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.form-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.form-input {
+    margin-top: 5px;
+    width: 100%;
+    height: 25px;
+    border: 1px solid black;
+}
