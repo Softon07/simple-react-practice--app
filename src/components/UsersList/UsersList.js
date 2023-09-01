@@ -1,8 +1,13 @@
+import SingleUser from './SingleUser';
 import styles from './UsersList.module.css';
 
 const UsersList = () => {
     return (
-        <p>UsersList Component</p>
+        <div className={styles['users-list']}>
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+        </div>
     );
 }
 
