@@ -1,14 +1,14 @@
-import SingleUser from './SingleUser';
-import styles from './UsersList.module.css';
+import SingleUser from "./SingleUser";
+import styles from "./UsersList.module.css";
 
-const UsersList = () => {
-    return (
-        <div className={styles['users-list']}>
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-        </div>
-    );
-}
+const UsersList = (props) => {
+  return (
+    <div className={styles["users-list"]}>
+      {props.users.map((user) => {
+        return <SingleUser key={user.id} name={user.name} age={user.age} />;
+      })}
+    </div>
+  );
+};
 
 export default UsersList;

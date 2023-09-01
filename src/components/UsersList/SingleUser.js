@@ -1,10 +1,11 @@
 import styles from "./SingleUser.module.css";
 
-const SingleUser = () => {
+const SingleUser = (props) => {
   return (
     <div className={styles.user}>
       <p>
-        Imię<span> (Wiek)</span>
+        {props.name}
+        <span> ({props.age} years old)</span>
       </p>
     </div>
   );
